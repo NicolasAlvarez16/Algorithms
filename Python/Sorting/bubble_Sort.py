@@ -12,8 +12,8 @@ def bubble_sort(array):
             if array[i] > array[i + 1]:
                 swap(i, i + 1, array)
                 is_sorted = False
-            counter += 1
-        return array
+        counter += 1
+    return array
 
 def swap(i, j, array):
     """Function to swap two elements in the same array"""
