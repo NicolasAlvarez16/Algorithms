@@ -1,5 +1,5 @@
 # Algorithms
-All the algorithms that I learned to code
+All the algorithms that I learned how to implement in code
 
 # Sorting
 1. Bubble Sort Algorithm
