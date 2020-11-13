@@ -6,10 +6,10 @@ def insertion_sort(array):
     """Function to implement insertion sort algorithm"""
     for i in range(1, len(array)):
         # Looping through array once
-        j = i # Current number
-        while j > 0 and array[j] < array[j - 1]:
-            # Looping array backwards
-            swap(j, j - 1, array) # Swaping to insert current number in sorted sublist
+        value_sort = array[i] # Current number
+        while array[i - 1] > value_sort and i > 0:
+            swap(i, i - 1, array) # Swaping to insert current number in sorted sublist
+            i = i - 1
     return array
 
 def swap(i, j, array):
@@ -17,5 +17,4 @@ def swap(i, j, array):
     array[i], array[j] = array[j], array[i]
 
 # Main Program
-array = [8, 5, 2, 9, 5, 6, 3]
-print(insertion_sort(array))
+print(insertion_sort([1, -12, 9, 54, -11, 75, 8, 14]))

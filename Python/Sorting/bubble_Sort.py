@@ -20,5 +20,4 @@ def swap(i, j, array):
     array[i], array[j] = array[j], array[i]
 
 # Main Program
-array = [8, 5, 2, 9, 5, 6, 3]
-print(bubble_sort(array))
+print(bubble_sort([1, -12, 9, 54, -11, 75, 8, 14]))
