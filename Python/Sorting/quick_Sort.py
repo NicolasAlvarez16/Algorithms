@@ -5,7 +5,7 @@
 # Worst: O(n^2) Time Complexity | O(nlog(n)) Space Complexity
 
 def quick_sort(array):
-    """Function to hold the main function that implements quick sort algorithm"""
+    """Function to hold the main implementation of quick sort algorithm"""
     quick_sort_aux(array, 0, len(array) - 1)
     return array
 
