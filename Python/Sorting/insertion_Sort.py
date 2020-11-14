@@ -8,7 +8,7 @@ def insertion_sort(array):
         # Looping through array once
         value_sort = array[i] # Select the first unsorted element
         while array[i - 1] > value_sort and i > 0:
-            swap(i, i - 1, array) # Swaping other elements to the right to shift unsorted element
+            swap(i, i - 1, array) # Swapping other elements to the right to shift unsorted element
             i = i - 1
     return array
 
