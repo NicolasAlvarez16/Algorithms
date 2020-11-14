@@ -13,8 +13,8 @@ def selection_sort(array):
     return array
 
 def swap(i, j, array):
-    """Function to swap two elements in the same array"""
+    """Function to swap two elements"""
     array[i], array[j] = array[j], array[i]
 
 # Main Program
-print(selection_sort([2, 3, 5, 5, 6, 8, 9]))
+print(selection_sort([1, -12, 9, 54, -11, 75, 8, 14]))

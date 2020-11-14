@@ -16,7 +16,7 @@ def bubble_sort(array):
     return array
 
 def swap(i, j, array):
-    """Function to swap two elements in the same array"""
+    """Function to swap two elements"""
     array[i], array[j] = array[j], array[i]
 
 # Main Program
