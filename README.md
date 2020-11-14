@@ -1,5 +1,5 @@
 # Algorithms
-All the algorithms that I learned how to implement in code
+All the algorithms that I learned how to implement in code using C and python.
 
 # Sorting
 1. Bubble Sort Algorithm
