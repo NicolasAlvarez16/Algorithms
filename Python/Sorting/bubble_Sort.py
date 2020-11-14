@@ -9,6 +9,7 @@ def bubble_sort(array):
     while not is_sorted:
         is_sorted = True # Assume is sorted
         for i in range(len(array) - 1 - counter):
+            # Check if actual element is greater than following element
             if array[i] > array[i + 1]:
                 swap(i, i + 1, array)
                 is_sorted = False

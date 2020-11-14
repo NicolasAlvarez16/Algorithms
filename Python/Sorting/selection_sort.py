@@ -6,6 +6,7 @@ def selection_sort(array):
     while current_idx < len(array) - 1:
         smallest_idx = current_idx
         for i in range(current_idx + 1, len(array)):
+            # Serch for smallest number
             if array[smallest_idx] > array[i]:
                 smallest_idx = i # Updating smallest number
         swap(current_idx, smallest_idx, array)
