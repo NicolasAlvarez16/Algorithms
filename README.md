@@ -6,6 +6,7 @@ All the algorithms that I learned to code
 2. Insertion Sort Algorithm
 3. Quick Sort Algorithm 
 4. Merger Sort Algorithm
+5. Selection Sort Algorithm
 
 # Algoexpert
 All the algoritms I learned are thanks to Algoexpert.io
