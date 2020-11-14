@@ -44,7 +44,7 @@ int  * bubbleSort(int *myArray){
 }
 
 void swap(int *i, int *j){
-    int temp =0; 
+    int temp = 0; 
 
     temp = *i;
     *i = *j;
