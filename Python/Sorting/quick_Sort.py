@@ -12,7 +12,7 @@ def quick_sort(array):
 def quick_sort_aux(array, start_idx, end_idx):
     """Function to sort array"""
     if start_idx >= end_idx:
-        # Array sorted
+        # Base case -> Array of len 1 or even 0
         return
     pivot_idx = start_idx
     left_idx = start_idx + 1
