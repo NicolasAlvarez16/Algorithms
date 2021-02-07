@@ -11,3 +11,4 @@ All the algorithms that I learned how to implement in code using C and python.
 
 # Euclides Algorithm (gcd)
 Implementing Euclides Algorihm as a command line program. This program will find the gcd between two numbers using euclides algorihm. It will also find the diophantine equation using the extend euclides algorithm. The programl will also show all the workings on how to get the answers.
+![alt text](https://github.com/NicolasAlvarez16/Algorithms/blob/main/images/Captura%20de%20pantalla%202021-02-07%20a%20las%2023.02.33.png)
