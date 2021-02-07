@@ -8,6 +8,3 @@ All the algorithms that I learned how to implement in code using C and python.
 4. Merger Sort Algorithm
 5. Selection Sort Algorithm
 6. Heap Sort Algorithm
-
-# Algoexpert
-All the algoritms I learned are thanks to Algoexpert.io
