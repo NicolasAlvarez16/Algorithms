@@ -9,7 +9,7 @@ All the algorithms that I learned how to implement in code using C and python.
 5. Selection Sort Algorithm
 6. Heap Sort Algorithm
 
-# math-algorithms
+# Math Algorithms
 This section includes some of the maths algorithms that I learned in my maths class that I decided to program.
 
 ## Euclides Algorithm (gcd)
