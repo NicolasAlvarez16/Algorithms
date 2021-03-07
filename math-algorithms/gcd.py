@@ -10,7 +10,6 @@ def swap(a, b):
     return b, a
 
 def gcd(a, b, reminders, quotients):
-
     # if(b > a):
     #     a, b = swap(a, b)
     
