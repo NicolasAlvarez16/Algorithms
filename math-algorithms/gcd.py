@@ -1,4 +1,4 @@
-#!/bin/python
+#!/Users/nico/opt/anaconda3/envs/general/bin/python3.6
 
 import sys
 
@@ -57,7 +57,7 @@ def diophantine_equation(a, b, gcd, x0, y0, diophantine_num):
     if(diophantine_num % gcd != 0):
         return f'Since this gcd = {gcd} does not devide {diophantine_num} --> There are no solutions'
     else:
-        print(f'Particular Solution: {a}({x0}) + {b}({y0}) = {diophantine_num}')
+        print(f'Particular Solution: {a}({x0}) + {b}({y0}) = ', (a * x0 + b * y0))
         print("x = x0 + k(b/d)")
         print("y = y0 - k(a/d)")
         return f'x = {x0} + {b//gcd}k    |   y = {y0} - {a//gcd}k'

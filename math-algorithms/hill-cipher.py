@@ -1,5 +1,4 @@
 from gcd import gcd, extended_gcd, swap
-import numpy as np
 
 MOD = 26
 
@@ -26,8 +25,10 @@ def matrix_multiply(input_text, matrix, alphabet_dict):
             x = 0 # Matrix variable
             aux = matrix[j][x] * values[keys.index(input_text[i])]
             aux = aux + (matrix[j][x + 1] * values[keys.index(input_text[i + 1])])
+            print("Value before reducing: ", aux) # Showing workings
             if(aux > MOD):
                 aux = aux % MOD
+            print("Value after reducing: ", aux) # Showing workings
             output_text = " ".join([output_text, keys[aux]])
         else:
             # Lower row of the matrix
@@ -35,9 +36,11 @@ def matrix_multiply(input_text, matrix, alphabet_dict):
             x = 0
             aux = matrix[j][x] * values[keys.index(input_text[i - 1])]
             aux = aux + (matrix[j][x + 1] * values[keys.index(input_text[i])])
+            print("Value before reducing: ", aux) # Showing workings
             if(aux > MOD):
                 aux = aux % MOD
             output_text = " ".join([output_text, keys[aux]])
+            print("Value after reducing: ", aux) # Showing workings
     return output_text
 
 def decrypt(alphabet_dict):
@@ -55,22 +58,34 @@ def decrypt(alphabet_dict):
         add_extra_letter = True
         encrypted_text = encrypted_text + 'X'
     
+    # Shwoing workings
+    for i in encrypted_text:
+        if(i in alphabet_dict):
+            print(i, "--->", alphabet_dict.get(i)) # Showing workings
+    
     # Getting the determinant (det)
     det = (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0]) 
+    print("Det = ", det)
     aux, r, q = gcd(MOD, det, r, q) # Calling gcd not to rewrite code
     x, y = extended_gcd(r, q, 1, 0, 0, 1, 0) # Calling extended_gcd not to rewrite code
+    print(f'({det})^-1 mod {MOD} ----> {y}') # Showing workings
     det = (y % MOD)
+    print(f'{y} = {det} mod {MOD}') # Showing workings
 
     # Swapping the positions of matrix (adj)
     matrix[0][0], matrix[1][1] = swap(matrix[0][0], matrix[1][1])
     matrix[0][1] *= -1
     matrix[1][0] *= -1
+    print("Matrix: ", matrix) # Showing workings
+    print(f'({det} X {matrix}) mod {MOD}') # Showing workings
     matrix = [[(det * matrix[i][j]) % MOD for j in range(2)] for i in range(2)]
-
+    print(matrix) # Showing workings
+    
     decrypted_text = matrix_multiply(encrypted_text, matrix, alphabet_dict)
 
     if(add_extra_letter):
         decrypted_text = decrypted_text[:-1]
+    return decrypted_text
 
 def encrypt(alphabet_dict):
     plain_text = input("Enter your plain text: ")
@@ -83,6 +98,11 @@ def encrypt(alphabet_dict):
     if(len(plain_text) % 2 != 0):
         add_extra_letter = True
         plain_text = plain_text + 'X' # To make sure all letters have pairs
+    
+    # Shwoing workings
+    for i in plain_text:
+        if(i in alphabet_dict):
+            print(i, "--->", alphabet_dict.get(i)) # Showing workings
 
     encripted_text = matrix_multiply(plain_text, matrix, alphabet_dict)
 
